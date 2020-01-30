@@ -29,7 +29,15 @@ namespace GradeBook
         }
         public void AddGrade(double grade)
         {
-            grades.Add(grade);
+            if (grade >= 0 && grade <=100)
+            {
+                grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("Invalid value");
+            }
+            
         }
         private List<double> grades;
         public string Name;
